@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 56px;
+
+}
+@media (min-width: 768px) {
+    #home, #projects {
+        background-image: url(../img/sokhibjon_ismatov_final.jpg);
+        min-height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #fff;
+
+    }
+}
+@media (max-width: 768px) {
+    #home, #projects {
+        background-image: url(../img/Sokhibjon.jpg);
+        min-height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #fff;
+
+    }
+}
+
+
+.navbar {
+    background-color: #000;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-family: Arial -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
+    font-size: 42px;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+
+.navbar-nav .nav-item {
+    border-bottom: 4px solid #2098D1;
+}
+
+
+/*HOVER*/
+.nav-item {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.nav-item:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098D1;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.nav-item:hover, .nav-item:focus, .nav-item:active {
+    color: white;
+}
+
+.nav-item:hover:before, .nav-item:focus:before, .nav-item:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+
+/*resume-download button */
+@media (min-width: 768px) {
+    .down-resume-btn {
+        animation-name: resume-btn-scroll;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        position: fixed;
+        top: 40%;
+        left: -3.5%;
+        transform: rotate(90deg);
+
+    }
+}
+
+@media (max-width: 768px) {
+    .down-resume-btn {
+        animation-name: resume-btn-scroll;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        position: fixed;
+        top: 40%;
+        left: -10%;
+        transform: rotate(90deg);
+        opacity: 0.5;
+    }
+}
+
+
+@keyframes resume-btn-scroll {
+    0% {
+
+        transform: rotate(90deg) scale(1);
+    }
+    17% {
+        transform: rotate(90deg) scale(1.4);
+    }
+    33% {
+        transform: rotate(90deg) scale(1);
+    }
+    50% {
+        transform: rotate(90deg) scale(1.4);
+    }
+    66% {
+        transform: rotate(90deg) scale(1);
+    }
+    83% {
+        transform: rotate(90deg) scale(1.4);
+    }
+    100% {
+        transform: rotate(90deg) scale(1);
+    }
+}
+
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    -webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/*About*/
+
+
+#about {
+    font-family: Roboto-Regular;
+    padding: 100px 0;
+    background-image: url("../img/hero_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about h1 {
+    font-size: 90px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+#about p {
+    /*font-weight: 700;*/
+    font-size: 32px;
+    color: #6b5353;
+    font-weight: bold;
+
+}
+
+/*Projects*/
+
+#projects h1 {
+    font-family: 'Allan';
+    text-align: center;
+    font-size: 100px;
+}
+
+/*jssor slider loading skin spin css*/
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*jssor slider bullet skin 051 css*/
+.jssorb051 .i {
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssorb051 .i .b {
+    fill: #fff;
+    fill-opacity: 0.3;
+}
+
+.jssorb051 .i:hover .b {
+    fill-opacity: .7;
+}
+
+.jssorb051 .iav .b {
+    fill-opacity: 1;
+}
+
+.jssorb051 .i.idn {
+    opacity: .3;
+}
+
+/*jssor slider arrow skin 051 css*/
+.jssora051 {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssora051 .a {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 360;
+    stroke-miterlimit: 10;
+}
+
+.jssora051:hover {
+    opacity: .8;
+}
+
+.jssora051.jssora051dn {
+    opacity: .5;
+}
+
+.jssora051.jssora051ds {
+    opacity: .3;
+    pointer-events: none;
+}
+
+.pro-link {
+    position: absolute;
+    /*top: -20%;*/
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    font-family: 'Sacramento', cursive;
+}
+@media (min-width: 768px) {
+    .pro-link{
+        top: -50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pro-link{
+        top: -20%;
+    }
+}
+
+.pro-link:hover {
+    opacity: 1;
+    color: #fff !important;
+}
+
+#contact {
+    background: #000;
+    color: #fff;
+
+}
+#contact ul li{
+    margin: 0 10px;
+}
+
+
